@@ -15,6 +15,10 @@
 		1E24FAC41C4C386D004B4BB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E24FAC21C4C386D004B4BB6 /* LaunchScreen.storyboard */; };
 		1E24FACF1C4C386D004B4BB6 /* Mathematik_for_KidsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E24FACE1C4C386D004B4BB6 /* Mathematik_for_KidsTests.swift */; };
 		1E24FADA1C4C386D004B4BB6 /* Mathematik_for_KidsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E24FAD91C4C386D004B4BB6 /* Mathematik_for_KidsUITests.swift */; };
+		1E24FAE81C4C47F8004B4BB6 /* AdditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E24FAE71C4C47F8004B4BB6 /* AdditionViewController.swift */; };
+		1E24FAEA1C4C481B004B4BB6 /* SubtraktionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E24FAE91C4C481B004B4BB6 /* SubtraktionViewController.swift */; };
+		1E24FAEC1C4C4830004B4BB6 /* MultiplikationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E24FAEB1C4C4830004B4BB6 /* MultiplikationViewController.swift */; };
+		1E24FAEE1C4C4843004B4BB6 /* DivisionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E24FAED1C4C4843004B4BB6 /* DivisionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		1E24FAD51C4C386D004B4BB6 /* Mathematik for KidsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mathematik for KidsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E24FAD91C4C386D004B4BB6 /* Mathematik_for_KidsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mathematik_for_KidsUITests.swift; sourceTree = "<group>"; };
 		1E24FADB1C4C386D004B4BB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E24FAE71C4C47F8004B4BB6 /* AdditionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionViewController.swift; sourceTree = "<group>"; };
+		1E24FAE91C4C481B004B4BB6 /* SubtraktionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubtraktionViewController.swift; sourceTree = "<group>"; };
+		1E24FAEB1C4C4830004B4BB6 /* MultiplikationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiplikationViewController.swift; sourceTree = "<group>"; };
+		1E24FAED1C4C4843004B4BB6 /* DivisionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DivisionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +109,10 @@
 			children = (
 				1E24FAB61C4C386D004B4BB6 /* AppDelegate.swift */,
 				1E24FAB81C4C386D004B4BB6 /* ViewController.swift */,
+				1E24FAE71C4C47F8004B4BB6 /* AdditionViewController.swift */,
+				1E24FAE91C4C481B004B4BB6 /* SubtraktionViewController.swift */,
+				1E24FAEB1C4C4830004B4BB6 /* MultiplikationViewController.swift */,
+				1E24FAED1C4C4843004B4BB6 /* DivisionViewController.swift */,
 				1E24FABA1C4C386D004B4BB6 /* Main.storyboard */,
 				1E24FAC01C4C386D004B4BB6 /* Assets.xcassets */,
 				1E24FAC21C4C386D004B4BB6 /* LaunchScreen.storyboard */,
@@ -196,6 +208,7 @@
 				TargetAttributes = {
 					1E24FAB21C4C386C004B4BB6 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 2YU38T3WV9;
 					};
 					1E24FAC91C4C386D004B4BB6 = {
 						CreatedOnToolsVersion = 7.2;
@@ -261,6 +274,10 @@
 			files = (
 				1E24FABF1C4C386D004B4BB6 /* Mathematik_for_Kids.xcdatamodeld in Sources */,
 				1E24FAB91C4C386D004B4BB6 /* ViewController.swift in Sources */,
+				1E24FAE81C4C47F8004B4BB6 /* AdditionViewController.swift in Sources */,
+				1E24FAEA1C4C481B004B4BB6 /* SubtraktionViewController.swift in Sources */,
+				1E24FAEE1C4C4843004B4BB6 /* DivisionViewController.swift in Sources */,
+				1E24FAEC1C4C4830004B4BB6 /* MultiplikationViewController.swift in Sources */,
 				1E24FAB71C4C386D004B4BB6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,6 +418,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Mathematik for Kids/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Berkant-Dursun.Mathematik-for-Kids";
@@ -412,6 +430,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Mathematik for Kids/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Berkant-Dursun.Mathematik-for-Kids";
