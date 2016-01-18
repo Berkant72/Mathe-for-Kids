@@ -32,7 +32,7 @@ class MultiplikationViewController: UIViewController ,UIAlertViewDelegate {
         resultLabelC.text = "3"
         resultLabelD.text = "4"
         resultLabelE.text = "5"
-        timerLabel.text = "15"
+        timerLabel.text = "60"
         scoreLabel.text = "0"
         highScoreLabel.text = "0"
         buttonALabel.enabled = false
@@ -80,9 +80,9 @@ class MultiplikationViewController: UIViewController ,UIAlertViewDelegate {
         buttonELabel.enabled = true
         buttonStartLabel.enabled = false
         scoreLabel.text = "0"
-        timerLabel.text = "15"
+        timerLabel.text = "60"
         points = 0
-        timerCount = 15
+        timerCount = 60
         if timerRunning == false {
             timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "counting", userInfo: nil, repeats: true)
             timerRunning = true
