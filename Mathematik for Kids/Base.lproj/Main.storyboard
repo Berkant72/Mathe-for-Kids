@@ -67,7 +67,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NFY-Ty-KpL">
-                                <rect key="frame" x="200" y="356" width="200" height="30"/>
+                                <rect key="frame" x="200" y="362" width="200" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="AtW-MK-tKv"/>
                                     <constraint firstAttribute="width" constant="200" id="Ja5-kw-mIh"/>
@@ -81,8 +81,22 @@
                                     <segue destination="F4h-Sh-KUe" kind="show" identifier="subtraktionSegue" id="nWS-e2-JZ8"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bpp-YM-Ht9">
+                                <rect key="frame" x="200" y="450" width="200" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="5Y1-Ma-W8b"/>
+                                    <constraint firstAttribute="height" constant="34" id="dKa-OU-pd2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="23"/>
+                                <state key="normal" title="Division">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="7wA-eI-P5g" kind="show" identifier="divisionSegue" id="XNK-J4-YzH"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cgk-Xw-43Q">
-                                <rect key="frame" x="200" y="394" width="200" height="30"/>
+                                <rect key="frame" x="200" y="406" width="200" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="gKP-7g-b6Y"/>
                                     <constraint firstAttribute="height" constant="30" id="k2m-Zq-O2i"/>
@@ -96,20 +110,6 @@
                                     <segue destination="sBe-4B-gZQ" kind="show" identifier="multiplikationSegue" id="1te-Pi-HvA"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bpp-YM-Ht9">
-                                <rect key="frame" x="200" y="432" width="200" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="5Y1-Ma-W8b"/>
-                                    <constraint firstAttribute="height" constant="34" id="dKa-OU-pd2"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="23"/>
-                                <state key="normal" title="Division">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="7wA-eI-P5g" kind="show" identifier="divisionSegue" id="XNK-J4-YzH"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.35785156488418579" green="0.48266708850860596" blue="0.086501501500606537" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -117,7 +117,7 @@
                             <constraint firstItem="tST-Pl-NAJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="2mt-Fm-Cn7"/>
                             <constraint firstItem="Bpp-YM-Ht9" firstAttribute="leading" secondItem="Cgk-Xw-43Q" secondAttribute="leading" id="6lu-Bg-2zp"/>
                             <constraint firstItem="wYm-DX-GPc" firstAttribute="top" secondItem="rUY-hx-sbb" secondAttribute="bottom" constant="8" symbolic="YES" id="7sl-dh-brU"/>
-                            <constraint firstItem="NFY-Ty-KpL" firstAttribute="top" secondItem="cNu-jf-S6w" secondAttribute="bottom" constant="8" symbolic="YES" id="8h2-fs-LRA"/>
+                            <constraint firstItem="NFY-Ty-KpL" firstAttribute="top" secondItem="cNu-jf-S6w" secondAttribute="bottom" constant="14" id="8h2-fs-LRA"/>
                             <constraint firstItem="Cgk-Xw-43Q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9BX-N2-rLM"/>
                             <constraint firstItem="G40-Us-Yhi" firstAttribute="top" secondItem="wYm-DX-GPc" secondAttribute="bottom" constant="8" symbolic="YES" id="BDd-dD-pnp"/>
                             <constraint firstItem="cNu-jf-S6w" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EfL-QB-LyT"/>
@@ -126,13 +126,13 @@
                             <constraint firstItem="Bpp-YM-Ht9" firstAttribute="trailing" secondItem="Cgk-Xw-43Q" secondAttribute="trailing" id="KfL-tO-iJa"/>
                             <constraint firstItem="rUY-hx-sbb" firstAttribute="leading" secondItem="wYm-DX-GPc" secondAttribute="leading" id="QaL-ip-r2x"/>
                             <constraint firstItem="G40-Us-Yhi" firstAttribute="leading" secondItem="wYm-DX-GPc" secondAttribute="leading" id="T9E-qt-SJ9"/>
-                            <constraint firstItem="Cgk-Xw-43Q" firstAttribute="top" secondItem="NFY-Ty-KpL" secondAttribute="bottom" constant="8" symbolic="YES" id="Vdb-oc-6Oy"/>
+                            <constraint firstItem="Cgk-Xw-43Q" firstAttribute="top" secondItem="NFY-Ty-KpL" secondAttribute="bottom" constant="14" id="Vdb-oc-6Oy"/>
                             <constraint firstItem="NFY-Ty-KpL" firstAttribute="trailing" secondItem="cNu-jf-S6w" secondAttribute="trailing" id="XQQ-tU-uEf"/>
                             <constraint firstItem="G40-Us-Yhi" firstAttribute="trailing" secondItem="tST-Pl-NAJ" secondAttribute="trailing" id="XwG-T5-jLU"/>
                             <constraint firstItem="rUY-hx-sbb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="Yxf-HD-qny"/>
                             <constraint firstItem="NFY-Ty-KpL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dBa-ji-jgB"/>
                             <constraint firstItem="cNu-jf-S6w" firstAttribute="centerX" secondItem="tST-Pl-NAJ" secondAttribute="centerX" id="dpa-Q9-gF7"/>
-                            <constraint firstItem="Bpp-YM-Ht9" firstAttribute="top" secondItem="Cgk-Xw-43Q" secondAttribute="bottom" constant="8" symbolic="YES" id="eJU-LX-VN3"/>
+                            <constraint firstItem="Bpp-YM-Ht9" firstAttribute="top" secondItem="Cgk-Xw-43Q" secondAttribute="bottom" constant="14" id="eJU-LX-VN3"/>
                             <constraint firstItem="wYm-DX-GPc" firstAttribute="trailing" secondItem="G40-Us-Yhi" secondAttribute="trailing" id="gPd-9j-5Si"/>
                             <constraint firstItem="wYm-DX-GPc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hgu-qQ-JI7"/>
                             <constraint firstItem="NFY-Ty-KpL" firstAttribute="leading" secondItem="cNu-jf-S6w" secondAttribute="leading" id="sCZ-VZ-Lid"/>
