@@ -19,6 +19,7 @@
 		1E24FAEA1C4C481B004B4BB6 /* SubtraktionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E24FAE91C4C481B004B4BB6 /* SubtraktionViewController.swift */; };
 		1E24FAEC1C4C4830004B4BB6 /* MultiplikationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E24FAEB1C4C4830004B4BB6 /* MultiplikationViewController.swift */; };
 		1E24FAEE1C4C4843004B4BB6 /* DivisionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E24FAED1C4C4843004B4BB6 /* DivisionViewController.swift */; };
+		1E24FAF01C4D9CEF004B4BB6 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E24FAEF1C4D9CEF004B4BB6 /* InfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		1E24FAE91C4C481B004B4BB6 /* SubtraktionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubtraktionViewController.swift; sourceTree = "<group>"; };
 		1E24FAEB1C4C4830004B4BB6 /* MultiplikationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiplikationViewController.swift; sourceTree = "<group>"; };
 		1E24FAED1C4C4843004B4BB6 /* DivisionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DivisionViewController.swift; sourceTree = "<group>"; };
+		1E24FAEF1C4D9CEF004B4BB6 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				1E24FAE91C4C481B004B4BB6 /* SubtraktionViewController.swift */,
 				1E24FAEB1C4C4830004B4BB6 /* MultiplikationViewController.swift */,
 				1E24FAED1C4C4843004B4BB6 /* DivisionViewController.swift */,
+				1E24FAEF1C4D9CEF004B4BB6 /* InfoViewController.swift */,
 				1E24FABA1C4C386D004B4BB6 /* Main.storyboard */,
 				1E24FAC01C4C386D004B4BB6 /* Assets.xcassets */,
 				1E24FAC21C4C386D004B4BB6 /* LaunchScreen.storyboard */,
@@ -278,6 +281,7 @@
 				1E24FAEA1C4C481B004B4BB6 /* SubtraktionViewController.swift in Sources */,
 				1E24FAEE1C4C4843004B4BB6 /* DivisionViewController.swift in Sources */,
 				1E24FAEC1C4C4830004B4BB6 /* MultiplikationViewController.swift in Sources */,
+				1E24FAF01C4D9CEF004B4BB6 /* InfoViewController.swift in Sources */,
 				1E24FAB71C4C386D004B4BB6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

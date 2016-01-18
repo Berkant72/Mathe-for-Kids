@@ -95,6 +95,17 @@
                                     <segue destination="7wA-eI-P5g" kind="show" identifier="divisionSegue" id="XNK-J4-YzH"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejk-zq-8Wh">
+                                <rect key="frame" x="546" y="566" width="22" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="Es3-F3-TyC"/>
+                                    <constraint firstAttribute="width" constant="22" id="bzD-eh-EWz"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="aBW-Ap-Vd2" kind="show" identifier="infoSegue" id="D8X-Dn-QQU"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cgk-Xw-43Q">
                                 <rect key="frame" x="200" y="406" width="200" height="30"/>
                                 <constraints>
@@ -114,6 +125,7 @@
                         <color key="backgroundColor" red="0.35785156488418579" green="0.48266708850860596" blue="0.086501501500606537" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Bpp-YM-Ht9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1lg-Po-3DA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ejk-zq-8Wh" secondAttribute="trailing" constant="12" id="23U-5p-fYV"/>
                             <constraint firstItem="tST-Pl-NAJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="2mt-Fm-Cn7"/>
                             <constraint firstItem="Bpp-YM-Ht9" firstAttribute="leading" secondItem="Cgk-Xw-43Q" secondAttribute="leading" id="6lu-Bg-2zp"/>
                             <constraint firstItem="wYm-DX-GPc" firstAttribute="top" secondItem="rUY-hx-sbb" secondAttribute="bottom" constant="8" symbolic="YES" id="7sl-dh-brU"/>
@@ -136,6 +148,7 @@
                             <constraint firstItem="wYm-DX-GPc" firstAttribute="trailing" secondItem="G40-Us-Yhi" secondAttribute="trailing" id="gPd-9j-5Si"/>
                             <constraint firstItem="wYm-DX-GPc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hgu-qQ-JI7"/>
                             <constraint firstItem="NFY-Ty-KpL" firstAttribute="leading" secondItem="cNu-jf-S6w" secondAttribute="leading" id="sCZ-VZ-Lid"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ejk-zq-8Wh" secondAttribute="bottom" constant="12" id="sHe-HN-n0H"/>
                             <constraint firstItem="NFY-Ty-KpL" firstAttribute="leading" secondItem="Cgk-Xw-43Q" secondAttribute="leading" id="tGr-cJ-4ZR"/>
                             <constraint firstItem="NFY-Ty-KpL" firstAttribute="trailing" secondItem="Cgk-Xw-43Q" secondAttribute="trailing" id="w8t-kV-uG4"/>
                             <constraint firstItem="rUY-hx-sbb" firstAttribute="trailing" secondItem="wYm-DX-GPc" secondAttribute="trailing" id="wZg-Rq-Obb"/>
@@ -763,6 +776,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aPt-od-zWk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1875" y="801"/>
+        </scene>
+        <!--InfoView-->
+        <scene sceneID="DQh-i2-UI0">
+            <objects>
+                <viewController title="InfoView" id="aBW-Ap-Vd2" customClass="InfoViewController" customModule="Mathematik_for_Kids" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LZx-hV-JSq"/>
+                        <viewControllerLayoutGuide type="bottom" id="J7T-Bi-EFL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lot-an-gKS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="FcW-EL-tpY">
+                                <rect key="frame" x="20" y="64" width="560" height="467"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="© Berkant Dursun 2015" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdp-HI-alc">
+                                <rect key="frame" x="20" y="553" width="560" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="rsk-8Y-ib9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FcW-EL-tpY" firstAttribute="trailing" secondItem="lot-an-gKS" secondAttribute="trailingMargin" id="1k7-RI-qAj"/>
+                            <constraint firstItem="FcW-EL-tpY" firstAttribute="leading" secondItem="lot-an-gKS" secondAttribute="leadingMargin" id="32k-en-4Vf"/>
+                            <constraint firstItem="xdp-HI-alc" firstAttribute="top" secondItem="FcW-EL-tpY" secondAttribute="bottom" constant="22" id="KHt-dE-Nzy"/>
+                            <constraint firstItem="xdp-HI-alc" firstAttribute="leading" secondItem="lot-an-gKS" secondAttribute="leadingMargin" id="TGo-Kf-sEo"/>
+                            <constraint firstItem="J7T-Bi-EFL" firstAttribute="top" secondItem="xdp-HI-alc" secondAttribute="bottom" constant="20" id="UyA-P1-CQ1"/>
+                            <constraint firstItem="xdp-HI-alc" firstAttribute="trailing" secondItem="lot-an-gKS" secondAttribute="trailingMargin" id="naU-oc-ufZ"/>
+                            <constraint firstItem="FcW-EL-tpY" firstAttribute="top" secondItem="LZx-hV-JSq" secondAttribute="bottom" id="obi-Lo-Su8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="infoLabel" destination="FcW-EL-tpY" id="LUK-53-TMb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1T3-JG-JvX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1121" y="1791"/>
         </scene>
         <!--Division-->
         <scene sceneID="ae4-N9-xrv">
