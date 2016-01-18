@@ -18,7 +18,7 @@ class SubtraktionViewController: UIViewController ,UIAlertViewDelegate {
     var timerCount = 60
     var timerRunning = false
     var timer = NSTimer()
-    var highScoreAddition = NSInteger()
+    var highScoreSubtraktion = NSInteger()
     var prefs: NSUserDefaults = NSUserDefaults.standardUserDefaults()
     
     
@@ -42,8 +42,8 @@ class SubtraktionViewController: UIViewController ,UIAlertViewDelegate {
         buttonELabel.enabled = false
         buttonStartLabel.enabled = true
         
-        highScoreAddition = prefs.integerForKey("SavedHighScoreAddition")
-        highScoreLabel.text = String("Highscore: \(highScoreAddition)")
+        highScoreSubtraktion = prefs.integerForKey("SavedHighScoreSubtraktion")
+        highScoreLabel.text = String("Highscore: \(highScoreSubtraktion)")
         // print("HighScore: \(highScoreAddition)")
         prefs.synchronize()
         
@@ -223,10 +223,10 @@ class SubtraktionViewController: UIViewController ,UIAlertViewDelegate {
         points += 1
         scoreLabel.text = String(points)
         
-        if points > highScoreAddition {
-            highScoreAddition = points
-            prefs.setInteger(highScoreAddition, forKey: "SavedHighScoreAddition")
-            highScoreLabel.text = String("Highscore: \(highScoreAddition)")
+        if points > highScoreSubtraktion {
+            highScoreSubtraktion = points
+            prefs.setInteger(highScoreSubtraktion, forKey: "SavedHighScoreSubtraktion")
+            highScoreLabel.text = String("Highscore: \(highScoreSubtraktion)")
             prefs.synchronize()
             print("Syncronisiere")
             
@@ -241,24 +241,19 @@ class SubtraktionViewController: UIViewController ,UIAlertViewDelegate {
         var minuend = 0
         var subtrahend = 0
         
-        
         minuend = Int(arc4random_uniform(100))
         minuendLabel.text = String(minuend)
         // print("Zahl 1 = \(addendOne)")
         
         subtrahend = Int(arc4random_uniform(100))
         subtrahendLabel.text = String(subtrahend)
-        // print("Zahl 2 = \(addendTwo)")
+        // print("Zahl 2 = \(addendTwo)"
         
-        
-        
-        ergebnis = minuend + subtrahend
+        ergebnis = minuend - subtrahend
         // print("Ergebnis = \(ergebnis)")
         
-        if ((minuend + subtrahend > 100) || (minuend == 0) || (subtrahend == 0)) {
-            
+        if ((minuend < subtrahend) || ((minuend - subtrahend) == 0) || (subtrahend == 0)) {
             berechneSubtraktion()
-            
         }
         generator()
     }

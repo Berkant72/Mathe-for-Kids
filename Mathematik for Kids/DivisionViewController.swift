@@ -18,7 +18,7 @@ class DivisionViewController: UIViewController ,UIAlertViewDelegate {
     var timerCount = 60
     var timerRunning = false
     var timer = NSTimer()
-    var highScoreAddition = NSInteger()
+    var highScoreDivision = NSInteger()
     var prefs: NSUserDefaults = NSUserDefaults.standardUserDefaults()
     
     
@@ -42,8 +42,8 @@ class DivisionViewController: UIViewController ,UIAlertViewDelegate {
         buttonELabel.enabled = false
         buttonStartLabel.enabled = true
         
-        highScoreAddition = prefs.integerForKey("SavedHighScoreAddition")
-        highScoreLabel.text = String("Highscore: \(highScoreAddition)")
+        highScoreDivision = prefs.integerForKey("SavedHighScoreDivision")
+        highScoreLabel.text = String("Highscore: \(highScoreDivision)")
         // print("HighScore: \(highScoreAddition)")
         prefs.synchronize()
         
@@ -223,10 +223,10 @@ class DivisionViewController: UIViewController ,UIAlertViewDelegate {
         points += 1
         scoreLabel.text = String(points)
         
-        if points > highScoreAddition {
-            highScoreAddition = points
-            prefs.setInteger(highScoreAddition, forKey: "SavedHighScoreAddition")
-            highScoreLabel.text = String("Highscore: \(highScoreAddition)")
+        if points > highScoreDivision {
+            highScoreDivision = points
+            prefs.setInteger(highScoreDivision, forKey: "SavedHighScoreDivision")
+            highScoreLabel.text = String("Highscore: \(highScoreDivision)")
             prefs.synchronize()
             print("Syncronisiere")
             
@@ -241,25 +241,28 @@ class DivisionViewController: UIViewController ,UIAlertViewDelegate {
         var dividend = 0
         var divisor = 0
         
-        
         dividend = Int(arc4random_uniform(100))
         dividendLabel.text = String(dividend)
-        // print("Zahl 1 = \(addendOne)")
+        print("Zahl 1 = \(dividend)")
         
-        divisor = Int(arc4random_uniform(100))
-        divisorLabel.text = String(divisor)
-        // print("Zahl 2 = \(addendTwo)")
-        
-        
-        
-        ergebnis = dividend + divisor
-        // print("Ergebnis = \(ergebnis)")
-        
-        if ((dividend + divisor > 100) || (dividend == 0) || (divisor == 0)) {
-            
+        divisor = Int(arc4random_uniform(10))
+        if divisor == 0 {
             berechneDivision()
-            
         }
+        divisorLabel.text = String(divisor)
+        print("Zahl 2 = \(divisor)")
+        
+        
+        
+        
+        
+        if ((dividend < divisor) || (dividend == 0) || (divisor == 0) || (dividend % divisor != 0)) {
+            berechneDivision()
+        } else {
+            ergebnis = dividend / divisor
+            // print("Ergebnis = \(ergebnis)")
+        }
+        
         generator()
     }
     

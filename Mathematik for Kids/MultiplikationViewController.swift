@@ -18,7 +18,7 @@ class MultiplikationViewController: UIViewController ,UIAlertViewDelegate {
     var timerCount = 60
     var timerRunning = false
     var timer = NSTimer()
-    var highScoreAddition = NSInteger()
+    var highScoreMultiplikation = NSInteger()
     var prefs: NSUserDefaults = NSUserDefaults.standardUserDefaults()
     
     
@@ -42,8 +42,8 @@ class MultiplikationViewController: UIViewController ,UIAlertViewDelegate {
         buttonELabel.enabled = false
         buttonStartLabel.enabled = true
         
-        highScoreAddition = prefs.integerForKey("SavedHighScoreAddition")
-        highScoreLabel.text = String("Highscore: \(highScoreAddition)")
+        highScoreMultiplikation = prefs.integerForKey("SavedHighScoreMultiplikation")
+        highScoreLabel.text = String("Highscore: \(highScoreMultiplikation)")
         // print("HighScore: \(highScoreAddition)")
         prefs.synchronize()
         
@@ -223,10 +223,10 @@ class MultiplikationViewController: UIViewController ,UIAlertViewDelegate {
         points += 1
         scoreLabel.text = String(points)
         
-        if points > highScoreAddition {
-            highScoreAddition = points
-            prefs.setInteger(highScoreAddition, forKey: "SavedHighScoreAddition")
-            highScoreLabel.text = String("Highscore: \(highScoreAddition)")
+        if points > highScoreMultiplikation {
+            highScoreMultiplikation = points
+            prefs.setInteger(highScoreMultiplikation, forKey: "SavedHighScoreMultiplikation")
+            highScoreLabel.text = String("Highscore: \(highScoreMultiplikation)")
             prefs.synchronize()
             print("Syncronisiere")
             
@@ -242,23 +242,21 @@ class MultiplikationViewController: UIViewController ,UIAlertViewDelegate {
         var multiplier = 0
         
         
-        multiplicand = Int(arc4random_uniform(100))
+        multiplicand = Int(arc4random_uniform(10))
         multiplicandLabel.text = String(multiplicand)
         // print("Zahl 1 = \(addendOne)")
         
-        multiplier = Int(arc4random_uniform(100))
+        multiplier = Int(arc4random_uniform(10))
         multiplierLabel.text = String(multiplier)
         // print("Zahl 2 = \(addendTwo)")
         
         
         
-        ergebnis = multiplicand + multiplier
+        ergebnis = multiplicand * multiplier
         // print("Ergebnis = \(ergebnis)")
         
-        if ((multiplicand + multiplier > 100) || (multiplicand == 0) || (multiplier == 0)) {
-            
+        if ((ergebnis > 100) || (multiplicand == 0)) {
             berechneMultiplikation()
-            
         }
         generator()
     }
