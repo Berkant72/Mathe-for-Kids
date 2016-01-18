@@ -252,10 +252,6 @@ class DivisionViewController: UIViewController ,UIAlertViewDelegate {
         divisorLabel.text = String(divisor)
         print("Zahl 2 = \(divisor)")
         
-        
-        
-        
-        
         if ((dividend < divisor) || (dividend == 0) || (divisor == 0) || (dividend % divisor != 0)) {
             berechneDivision()
         } else {
