@@ -427,6 +427,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Berkant-Dursun.Mathematik-for-Kids";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -439,6 +440,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Berkant-Dursun.Mathematik-for-Kids";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -509,6 +511,7 @@
 				1E24FAE01C4C386D004B4BB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1E24FAE11C4C386D004B4BB6 /* Build configuration list for PBXNativeTarget "Mathematik for KidsTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +520,7 @@
 				1E24FAE31C4C386D004B4BB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1E24FAE41C4C386D004B4BB6 /* Build configuration list for PBXNativeTarget "Mathematik for KidsUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +529,7 @@
 				1E24FAE61C4C386D004B4BB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
