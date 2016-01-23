@@ -20,6 +20,7 @@ class AdditionViewController: UIViewController, UIAlertViewDelegate {
     var timer = NSTimer()
     var highScoreAddition = NSInteger()
     var prefs: NSUserDefaults = NSUserDefaults.standardUserDefaults()
+    var info = NSTimer()
     
     
     override func viewDidLoad() {
@@ -50,6 +51,7 @@ class AdditionViewController: UIViewController, UIAlertViewDelegate {
         
     }
     
+    @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var addendOneLabel: UILabel!
     @IBOutlet weak var addendTwoLabel: UILabel!
     @IBOutlet weak var resultLabelA: UILabel!
@@ -98,9 +100,11 @@ class AdditionViewController: UIViewController, UIAlertViewDelegate {
     @IBAction func buttonAPressed(sender: UIButton) {
         print(__FUNCTION__)
         if ergebnisInLabel == 0 {
+            richtig()
             score()
             berechneAddition()
         } else {
+            falsch()
             berechneAddition()
         }
         
@@ -110,9 +114,11 @@ class AdditionViewController: UIViewController, UIAlertViewDelegate {
     @IBAction func buttonBPressed(sender: UIButton) {
         print(__FUNCTION__)
         if ergebnisInLabel == 1 {
+            richtig()
             score()
             berechneAddition()
         } else {
+            falsch()
             berechneAddition()
         }
         
@@ -122,9 +128,11 @@ class AdditionViewController: UIViewController, UIAlertViewDelegate {
     @IBAction func buttonCPressed(sender: UIButton) {
         print(__FUNCTION__)
         if ergebnisInLabel == 2 {
+            richtig()
             score()
             berechneAddition()
         } else {
+            falsch()
             berechneAddition()
         }
         
@@ -134,9 +142,11 @@ class AdditionViewController: UIViewController, UIAlertViewDelegate {
     @IBAction func buttonDPressed(sender: UIButton) {
         print(__FUNCTION__)
         if ergebnisInLabel == 3 {
+            richtig()
             score()
             berechneAddition()
         } else {
+            falsch()
             berechneAddition()
         }
         
@@ -146,9 +156,11 @@ class AdditionViewController: UIViewController, UIAlertViewDelegate {
     @IBAction func buttonEPressed(sender: UIButton) {
         print(__FUNCTION__)
         if ergebnisInLabel == 4 {
+            richtig()
             score()
             berechneAddition()
         } else {
+            falsch()
             berechneAddition()
         }
         
@@ -160,6 +172,32 @@ class AdditionViewController: UIViewController, UIAlertViewDelegate {
         timer.invalidate()
         // print("viewWillDisappear")
     }
+    
+    func anzeigeDauer() {
+        print(__FUNCTION__)
+        infoLabel.hidden = true
+    }
+    
+    func richtig () {
+        print(__FUNCTION__)
+        infoLabel.hidden = false
+        infoLabel.textColor = UIColor.greenColor()
+        infoLabel.shadowColor = UIColor.grayColor()
+        infoLabel.text = "Richtig"
+        
+        info = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "anzeigeDauer", userInfo: nil, repeats: false)
+    }
+    
+    func falsch () {
+        print(__FUNCTION__)
+        infoLabel.hidden = false
+        infoLabel.textColor = UIColor.redColor()
+        infoLabel.shadowColor = UIColor.grayColor()
+        infoLabel.text = "Falsch"
+        
+        info = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "anzeigeDauer", userInfo: nil, repeats: false)
+    }
+    
     
     func counting() {
         

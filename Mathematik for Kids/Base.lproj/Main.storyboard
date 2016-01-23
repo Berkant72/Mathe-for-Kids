@@ -414,7 +414,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SU5-c0-C4V">
-                                <rect key="frame" x="180" y="489" width="240" height="30"/>
+                                <rect key="frame" x="180" y="444" width="240" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="G7e-jg-g9L"/>
                                     <constraint firstAttribute="height" constant="30" id="gtQ-Q8-dG7"/>
@@ -458,7 +458,8 @@
                             <constraint firstItem="j5S-Hp-EZd" firstAttribute="centerX" secondItem="yHv-c1-sy1" secondAttribute="centerX" id="V7O-IN-X80"/>
                             <constraint firstItem="p90-79-E3u" firstAttribute="centerX" secondItem="yHv-c1-sy1" secondAttribute="centerX" id="Vt3-8y-9gx"/>
                             <constraint firstItem="HGq-ez-fts" firstAttribute="centerX" secondItem="yHv-c1-sy1" secondAttribute="centerX" id="Xoc-iE-6mR"/>
-                            <constraint firstItem="SU5-c0-C4V" firstAttribute="top" secondItem="EdP-27-rU3" secondAttribute="bottom" constant="8" id="aSe-wf-ZDi"/>
+                            <constraint firstItem="SU5-c0-C4V" firstAttribute="top" secondItem="ns9-Aa-ldp" secondAttribute="bottom" constant="16" id="Ysb-ku-Qfu"/>
+                            <constraint firstItem="SU5-c0-C4V" firstAttribute="top" secondItem="EdP-27-rU3" secondAttribute="bottom" constant="-37" id="aSe-wf-ZDi"/>
                             <constraint firstItem="Bva-j1-jf9" firstAttribute="leading" secondItem="57b-oR-aox" secondAttribute="trailing" constant="8" id="bep-SZ-hsp"/>
                             <constraint firstItem="awk-n9-FZI" firstAttribute="centerX" secondItem="yHv-c1-sy1" secondAttribute="centerX" constant="-13" id="eXQ-kA-UYr"/>
                             <constraint firstItem="Xip-gB-gW9" firstAttribute="top" secondItem="qt4-0c-Fb4" secondAttribute="bottom" constant="20" id="fOn-4r-M37"/>
@@ -721,6 +722,16 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7mb-9L-dqK">
+                                <rect key="frame" x="180" y="444" width="240" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="1O6-B2-Wb9"/>
+                                    <constraint firstAttribute="height" constant="30" id="q1C-ep-5Qe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="34"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.2267349045" green="0.39209360129999998" blue="0.30703850179999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -740,6 +751,7 @@
                             <constraint firstItem="1LJ-08-DDY" firstAttribute="top" secondItem="QWz-cm-j7L" secondAttribute="bottom" constant="14" id="MYz-Ms-KxV"/>
                             <constraint firstItem="QWz-cm-j7L" firstAttribute="centerX" secondItem="NId-zE-4Yw" secondAttribute="centerX" id="Mte-XX-BZh"/>
                             <constraint firstItem="oE5-ne-lC2" firstAttribute="centerX" secondItem="NId-zE-4Yw" secondAttribute="centerX" id="Mv5-2z-KNv"/>
+                            <constraint firstItem="7mb-9L-dqK" firstAttribute="centerX" secondItem="NId-zE-4Yw" secondAttribute="centerX" id="NNE-k7-nKH"/>
                             <constraint firstItem="b4a-NT-Ga7" firstAttribute="top" secondItem="1HO-8c-VfI" secondAttribute="bottom" constant="8" id="NWC-oo-haA"/>
                             <constraint firstItem="T6l-HL-pJL" firstAttribute="top" secondItem="1HO-8c-VfI" secondAttribute="bottom" constant="8" id="Nfi-ld-apb"/>
                             <constraint firstItem="LCS-fK-eGo" firstAttribute="centerX" secondItem="NId-zE-4Yw" secondAttribute="centerX" id="O5v-hL-njp"/>
@@ -764,6 +776,7 @@
                             <constraint firstItem="fPV-I0-0NH" firstAttribute="top" secondItem="1HO-8c-VfI" secondAttribute="bottom" constant="8" id="t9a-yU-UBb"/>
                             <constraint firstItem="LCS-fK-eGo" firstAttribute="top" secondItem="TiX-kY-Aav" secondAttribute="bottom" constant="8" id="tF7-WZ-WoQ"/>
                             <constraint firstItem="6ru-Ha-dge" firstAttribute="leading" secondItem="NId-zE-4Yw" secondAttribute="leadingMargin" id="uCT-sh-WY1"/>
+                            <constraint firstItem="7mb-9L-dqK" firstAttribute="top" secondItem="KfW-4u-jHH" secondAttribute="bottom" constant="16" id="wI5-Zx-vD9"/>
                             <constraint firstItem="JX7-1a-c8y" firstAttribute="centerX" secondItem="NId-zE-4Yw" secondAttribute="centerX" id="zDE-OG-X5o"/>
                         </constraints>
                     </view>
@@ -775,6 +788,7 @@
                         <outlet property="buttonELabel" destination="KfW-4u-jHH" id="Wax-5g-Qdy"/>
                         <outlet property="buttonStartLabel" destination="JX7-1a-c8y" id="eDh-Oj-UcM"/>
                         <outlet property="highScoreLabel" destination="oE5-ne-lC2" id="Gh6-bk-mbs"/>
+                        <outlet property="infoLabel" destination="7mb-9L-dqK" id="7L7-pJ-f17"/>
                         <outlet property="minuendLabel" destination="TiX-kY-Aav" id="4IR-DE-gw8"/>
                         <outlet property="resultLabelA" destination="gLj-W1-idL" id="eRN-Uk-ln9"/>
                         <outlet property="resultLabelB" destination="1LJ-08-DDY" id="erL-rO-kjC"/>
@@ -1055,6 +1069,18 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JNl-My-Ov6">
+                                <rect key="frame" x="180" y="444" width="240" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="EhQ-8u-VFN"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="Z12-Ue-ehs"/>
+                                    <constraint firstAttribute="width" constant="240" id="Zn9-cR-cm7"/>
+                                    <constraint firstAttribute="height" constant="30" id="tVz-hI-wLG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="34"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.2267349045" green="0.39209360129999998" blue="0.30703850179999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -1071,6 +1097,7 @@
                             <constraint firstItem="WVj-2U-FwW" firstAttribute="top" secondItem="QiY-eW-R0l" secondAttribute="bottom" constant="14" id="HEe-Yo-gsV"/>
                             <constraint firstItem="jrx-sc-Ud4" firstAttribute="top" secondItem="z87-Vf-92m" secondAttribute="bottom" constant="14" id="Iss-2j-d9N"/>
                             <constraint firstItem="WVj-2U-FwW" firstAttribute="centerX" secondItem="lFo-FP-auS" secondAttribute="centerX" id="KzX-Xe-zW5"/>
+                            <constraint firstItem="JNl-My-Ov6" firstAttribute="top" secondItem="WVj-2U-FwW" secondAttribute="bottom" constant="16" id="LJj-jV-5xM"/>
                             <constraint firstItem="QiY-eW-R0l" firstAttribute="centerX" secondItem="lFo-FP-auS" secondAttribute="centerX" id="LLI-iL-0Gp"/>
                             <constraint firstItem="ENs-yu-8eK" firstAttribute="top" secondItem="V8u-rZ-vDy" secondAttribute="bottom" constant="8" id="LTi-hb-xAm"/>
                             <constraint firstItem="kS9-dg-bP8" firstAttribute="top" secondItem="WVj-2U-FwW" secondAttribute="bottom" constant="8" id="MZs-bm-o3Z"/>
@@ -1084,6 +1111,7 @@
                             <constraint firstItem="90U-iI-6cM" firstAttribute="leading" secondItem="mZZ-br-hiy" secondAttribute="trailing" constant="8" id="Xon-a7-3h3"/>
                             <constraint firstItem="ReR-ld-bU8" firstAttribute="top" secondItem="zqL-I8-D4D" secondAttribute="bottom" constant="20" id="aeU-4e-Ic7"/>
                             <constraint firstItem="vhO-Jb-rhQ" firstAttribute="top" secondItem="x14-T0-e3z" secondAttribute="bottom" constant="8" id="bR1-pL-4fU"/>
+                            <constraint firstItem="JNl-My-Ov6" firstAttribute="centerX" secondItem="lFo-FP-auS" secondAttribute="centerX" id="cHT-Nb-146"/>
                             <constraint firstItem="S25-wj-uIy" firstAttribute="centerX" secondItem="lFo-FP-auS" secondAttribute="centerX" id="dAg-g1-4g8"/>
                             <constraint firstItem="ENs-yu-8eK" firstAttribute="leading" secondItem="Bh8-5N-ToT" secondAttribute="trailing" constant="8" id="eQs-wn-bYT"/>
                             <constraint firstItem="yu0-IM-xF7" firstAttribute="centerX" secondItem="lFo-FP-auS" secondAttribute="centerX" id="ejY-fc-XOB"/>
@@ -1110,6 +1138,7 @@
                         <outlet property="dividendLabel" destination="x14-T0-e3z" id="Mpo-jG-Bw0"/>
                         <outlet property="divisorLabel" destination="vhO-Jb-rhQ" id="BXc-GC-LCY"/>
                         <outlet property="highScoreLabel" destination="zqL-I8-D4D" id="rC7-ZL-G4w"/>
+                        <outlet property="infoLabel" destination="JNl-My-Ov6" id="4Yp-IF-41K"/>
                         <outlet property="resultLabelA" destination="PM7-yv-ZxK" id="4Ep-J4-Tvv"/>
                         <outlet property="resultLabelB" destination="Rnh-Yy-8Y3" id="065-gm-VNZ"/>
                         <outlet property="resultLabelC" destination="yu0-IM-xF7" id="KBS-u4-SNA"/>
@@ -1342,6 +1371,18 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aiP-Id-ApH">
+                                <rect key="frame" x="180" y="444" width="240" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="I7d-uM-DSo"/>
+                                    <constraint firstAttribute="width" constant="240" id="VGB-0A-2zR"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="aSm-u5-9mc"/>
+                                    <constraint firstAttribute="height" constant="30" id="uhV-nC-LqO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="34"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.2267349045" green="0.39209360129999998" blue="0.30703850179999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -1371,6 +1412,7 @@
                             <constraint firstItem="lHc-Gp-VOR" firstAttribute="centerX" secondItem="o7L-Ke-Rfb" secondAttribute="centerX" constant="-13" id="bAO-kp-aPF"/>
                             <constraint firstItem="Qw1-ix-Kpa" firstAttribute="top" secondItem="lHc-Gp-VOR" secondAttribute="bottom" constant="8" id="bVB-Rl-qv2"/>
                             <constraint firstItem="DAs-im-T3B" firstAttribute="top" secondItem="nxO-cI-n1r" secondAttribute="bottom" constant="8" id="dma-ub-CNj"/>
+                            <constraint firstItem="aiP-Id-ApH" firstAttribute="centerX" secondItem="o7L-Ke-Rfb" secondAttribute="centerX" id="eA0-BP-glO"/>
                             <constraint firstItem="j3J-M2-N76" firstAttribute="top" secondItem="KUu-uu-Ewt" secondAttribute="bottom" constant="20" id="eXE-pe-bcA"/>
                             <constraint firstItem="9KJ-JU-viy" firstAttribute="centerX" secondItem="o7L-Ke-Rfb" secondAttribute="centerX" id="f9T-d9-LBX"/>
                             <constraint firstItem="9KJ-JU-viy" firstAttribute="leading" secondItem="Xnr-l6-JCQ" secondAttribute="trailing" constant="-71" id="fxg-UM-oRL"/>
@@ -1381,6 +1423,7 @@
                             <constraint firstItem="4Tq-WW-YwL" firstAttribute="centerX" secondItem="o7L-Ke-Rfb" secondAttribute="centerX" id="qQY-6a-5fv"/>
                             <constraint firstItem="4el-Fz-EDB" firstAttribute="centerX" secondItem="o7L-Ke-Rfb" secondAttribute="centerX" id="sQ9-OA-ReB"/>
                             <constraint firstItem="AlF-9j-iAI" firstAttribute="leading" secondItem="yyO-aN-FRI" secondAttribute="trailing" constant="8" id="soi-01-HJH"/>
+                            <constraint firstItem="aiP-Id-ApH" firstAttribute="top" secondItem="hUG-9A-D79" secondAttribute="bottom" constant="16" id="uHb-wL-zF2"/>
                             <constraint firstItem="kSr-rE-xym" firstAttribute="centerX" secondItem="o7L-Ke-Rfb" secondAttribute="centerX" id="usF-hY-y6P"/>
                             <constraint firstItem="yyO-aN-FRI" firstAttribute="leading" secondItem="o7L-Ke-Rfb" secondAttribute="leadingMargin" id="xOo-sA-UGR"/>
                             <constraint firstItem="Qfu-bN-i6M" firstAttribute="top" secondItem="rH4-Hc-KtY" secondAttribute="bottom" constant="14" id="xgh-bE-HdJ"/>
@@ -1395,6 +1438,7 @@
                         <outlet property="buttonELabel" destination="hUG-9A-D79" id="oef-d9-BX0"/>
                         <outlet property="buttonStartLabel" destination="z3J-VY-IgJ" id="tMh-ic-C0z"/>
                         <outlet property="highScoreLabel" destination="KUu-uu-Ewt" id="CY4-ko-Mih"/>
+                        <outlet property="infoLabel" destination="aiP-Id-ApH" id="PEf-mO-l1m"/>
                         <outlet property="multiplicandLabel" destination="amf-Tv-tVQ" id="dNz-YI-37Q"/>
                         <outlet property="multiplierLabel" destination="9KJ-JU-viy" id="J4h-gg-50d"/>
                         <outlet property="resultLabelA" destination="4el-Fz-EDB" id="EnJ-JX-pbt"/>

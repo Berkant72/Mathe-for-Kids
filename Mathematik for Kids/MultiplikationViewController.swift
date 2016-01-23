@@ -20,7 +20,7 @@ class MultiplikationViewController: UIViewController ,UIAlertViewDelegate {
     var timer = NSTimer()
     var highScoreMultiplikation = NSInteger()
     var prefs: NSUserDefaults = NSUserDefaults.standardUserDefaults()
-    
+    var info = NSTimer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,6 +61,7 @@ class MultiplikationViewController: UIViewController ,UIAlertViewDelegate {
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var highScoreLabel: UILabel!
+    @IBOutlet weak var infoLabel: UILabel!
     
     // Um auf die properties der UIButtons zuzugreifen
     @IBOutlet weak var buttonALabel: UIButton!
@@ -97,9 +98,11 @@ class MultiplikationViewController: UIViewController ,UIAlertViewDelegate {
     @IBAction func buttonAPressed(sender: UIButton) {
         print(__FUNCTION__)
         if ergebnisInLabel == 0 {
+            richtig()
             score()
             berechneMultiplikation()
         } else {
+            falsch()
             berechneMultiplikation()
         }
         
@@ -109,9 +112,11 @@ class MultiplikationViewController: UIViewController ,UIAlertViewDelegate {
     @IBAction func buttonBPressed(sender: UIButton) {
         print(__FUNCTION__)
         if ergebnisInLabel == 1 {
+            richtig()
             score()
             berechneMultiplikation()
         } else {
+            falsch()
             berechneMultiplikation()
         }
         
@@ -121,9 +126,11 @@ class MultiplikationViewController: UIViewController ,UIAlertViewDelegate {
     @IBAction func buttonCPressed(sender: UIButton) {
         print(__FUNCTION__)
         if ergebnisInLabel == 2 {
+            richtig()
             score()
             berechneMultiplikation()
         } else {
+            falsch()
             berechneMultiplikation()
         }
         
@@ -133,9 +140,11 @@ class MultiplikationViewController: UIViewController ,UIAlertViewDelegate {
     @IBAction func buttonDPressed(sender: UIButton) {
         print(__FUNCTION__)
         if ergebnisInLabel == 3 {
+            richtig()
             score()
             berechneMultiplikation()
         } else {
+            falsch()
             berechneMultiplikation()
         }
         
@@ -145,9 +154,11 @@ class MultiplikationViewController: UIViewController ,UIAlertViewDelegate {
     @IBAction func buttonEPressed(sender: UIButton) {
         print(__FUNCTION__)
         if ergebnisInLabel == 4 {
+            richtig()
             score()
             berechneMultiplikation()
         } else {
+            falsch()
             berechneMultiplikation()
         }
         
@@ -158,6 +169,31 @@ class MultiplikationViewController: UIViewController ,UIAlertViewDelegate {
         
         timer.invalidate()
         // print("viewWillDisappear")
+    }
+    
+    func anzeigeDauer() {
+        print(__FUNCTION__)
+        infoLabel.hidden = true
+    }
+    
+    func richtig () {
+        print(__FUNCTION__)
+        infoLabel.hidden = false
+        infoLabel.textColor = UIColor.greenColor()
+        infoLabel.shadowColor = UIColor.grayColor()
+        infoLabel.text = "Richtig"
+        
+        info = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "anzeigeDauer", userInfo: nil, repeats: false)
+    }
+    
+    func falsch () {
+        print(__FUNCTION__)
+        infoLabel.hidden = false
+        infoLabel.textColor = UIColor.redColor()
+        infoLabel.shadowColor = UIColor.grayColor()
+        infoLabel.text = "Falsch"
+        
+        info = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "anzeigeDauer", userInfo: nil, repeats: false)
     }
     
     func counting() {
