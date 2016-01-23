@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gjU-xD-4fv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gjU-xD-4fv">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -395,7 +395,7 @@
                                     <constraint firstAttribute="height" constant="45" id="3CC-TZ-Urr"/>
                                     <constraint firstAttribute="width" constant="74" id="ppU-0Y-CLd"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="27"/>
                                 <state key="normal" title="Start">
                                     <color key="titleColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -411,6 +411,16 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="21"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SU5-c0-C4V">
+                                <rect key="frame" x="180" y="489" width="240" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="G7e-jg-g9L"/>
+                                    <constraint firstAttribute="height" constant="30" id="gtQ-Q8-dG7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="34"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -437,6 +447,7 @@
                             <constraint firstItem="QIs-2K-whf" firstAttribute="leading" secondItem="yHv-c1-sy1" secondAttribute="leadingMargin" id="KFo-Xo-WNJ"/>
                             <constraint firstItem="i21-HO-P6I" firstAttribute="top" secondItem="fhn-5u-92k" secondAttribute="bottom" constant="14" id="KTB-HB-pzB"/>
                             <constraint firstItem="fhn-5u-92k" firstAttribute="top" secondItem="gxL-Ti-L4B" secondAttribute="bottom" constant="14" id="KwH-hQ-mGQ"/>
+                            <constraint firstItem="SU5-c0-C4V" firstAttribute="centerX" secondItem="yHv-c1-sy1" secondAttribute="centerX" id="LNm-mZ-GQN"/>
                             <constraint firstItem="j5S-Hp-EZd" firstAttribute="top" secondItem="kkg-6O-HiG" secondAttribute="bottom" constant="8" id="Lb2-po-38A"/>
                             <constraint firstItem="Bva-j1-jf9" firstAttribute="top" secondItem="jyW-EW-Qj1" secondAttribute="bottom" constant="8" id="Mll-Up-ZkO"/>
                             <constraint firstItem="ns9-Aa-ldp" firstAttribute="centerX" secondItem="yHv-c1-sy1" secondAttribute="centerX" id="NPg-XP-QfQ"/>
@@ -447,6 +458,7 @@
                             <constraint firstItem="j5S-Hp-EZd" firstAttribute="centerX" secondItem="yHv-c1-sy1" secondAttribute="centerX" id="V7O-IN-X80"/>
                             <constraint firstItem="p90-79-E3u" firstAttribute="centerX" secondItem="yHv-c1-sy1" secondAttribute="centerX" id="Vt3-8y-9gx"/>
                             <constraint firstItem="HGq-ez-fts" firstAttribute="centerX" secondItem="yHv-c1-sy1" secondAttribute="centerX" id="Xoc-iE-6mR"/>
+                            <constraint firstItem="SU5-c0-C4V" firstAttribute="top" secondItem="EdP-27-rU3" secondAttribute="bottom" constant="8" id="aSe-wf-ZDi"/>
                             <constraint firstItem="Bva-j1-jf9" firstAttribute="leading" secondItem="57b-oR-aox" secondAttribute="trailing" constant="8" id="bep-SZ-hsp"/>
                             <constraint firstItem="awk-n9-FZI" firstAttribute="centerX" secondItem="yHv-c1-sy1" secondAttribute="centerX" constant="-13" id="eXQ-kA-UYr"/>
                             <constraint firstItem="Xip-gB-gW9" firstAttribute="top" secondItem="qt4-0c-Fb4" secondAttribute="bottom" constant="20" id="fOn-4r-M37"/>
@@ -478,6 +490,7 @@
                         <outlet property="buttonELabel" destination="ns9-Aa-ldp" id="ga1-W5-hmh"/>
                         <outlet property="buttonStartLabel" destination="EdP-27-rU3" id="uos-nR-ZU5"/>
                         <outlet property="highScoreLabel" destination="qt4-0c-Fb4" id="VQA-mj-f7N"/>
+                        <outlet property="infoLabel" destination="SU5-c0-C4V" id="P6d-hR-kbW"/>
                         <outlet property="resultLabelA" destination="HGq-ez-fts" id="lCz-oc-GUx"/>
                         <outlet property="resultLabelB" destination="gxL-Ti-L4B" id="9rm-em-Zhl"/>
                         <outlet property="resultLabelC" destination="fhn-5u-92k" id="eBH-70-cE7"/>
@@ -640,7 +653,7 @@
                                     <constraint firstAttribute="height" constant="45" id="bVC-wL-Jbw"/>
                                     <constraint firstAttribute="width" constant="74" id="xHD-PC-JeY"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="27"/>
                                 <state key="normal" title="Start">
                                     <color key="titleColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -974,7 +987,7 @@
                                     <constraint firstAttribute="width" constant="74" id="Rs1-fD-yfB"/>
                                     <constraint firstAttribute="height" constant="45" id="eit-aE-yZj"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="27"/>
                                 <state key="normal" title="Start">
                                     <color key="titleColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -1256,10 +1269,12 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z3J-VY-IgJ">
                                 <rect key="frame" x="263" y="436" width="74" height="45"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="KGN-rf-iX2"/>
                                     <constraint firstAttribute="width" constant="74" id="Wnm-8W-y7l"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="h61-3G-iZD"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="74" id="wsF-bH-Gko"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="27"/>
                                 <state key="normal" title="Start">
                                     <color key="titleColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>

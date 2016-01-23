@@ -41,6 +41,7 @@ class MultiplikationViewController: UIViewController ,UIAlertViewDelegate {
         buttonDLabel.enabled = false
         buttonELabel.enabled = false
         buttonStartLabel.enabled = true
+        buttonStartLabel.hidden = false
         
         highScoreMultiplikation = prefs.integerForKey("SavedHighScoreMultiplikation")
         highScoreLabel.text = String("Highscore: \(highScoreMultiplikation)")
@@ -79,6 +80,7 @@ class MultiplikationViewController: UIViewController ,UIAlertViewDelegate {
         buttonDLabel.enabled = true
         buttonELabel.enabled = true
         buttonStartLabel.enabled = false
+        buttonStartLabel.hidden = true
         scoreLabel.text = "0"
         timerLabel.text = "60"
         points = 0
@@ -174,6 +176,7 @@ class MultiplikationViewController: UIViewController ,UIAlertViewDelegate {
             buttonDLabel.enabled = false
             buttonELabel.enabled = false
             buttonStartLabel.enabled = true
+            buttonStartLabel.hidden = false
         }
         
     }

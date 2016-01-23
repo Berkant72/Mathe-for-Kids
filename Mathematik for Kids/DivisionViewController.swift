@@ -41,6 +41,7 @@ class DivisionViewController: UIViewController ,UIAlertViewDelegate {
         buttonDLabel.enabled = false
         buttonELabel.enabled = false
         buttonStartLabel.enabled = true
+        buttonStartLabel.hidden = false
         
         highScoreDivision = prefs.integerForKey("SavedHighScoreDivision")
         highScoreLabel.text = String("Highscore: \(highScoreDivision)")
@@ -78,6 +79,7 @@ class DivisionViewController: UIViewController ,UIAlertViewDelegate {
         buttonDLabel.enabled = true
         buttonELabel.enabled = true
         buttonStartLabel.enabled = false
+        buttonStartLabel.hidden = true
         scoreLabel.text = "0"
         timerLabel.text = "60"
         points = 0
@@ -174,6 +176,7 @@ class DivisionViewController: UIViewController ,UIAlertViewDelegate {
             buttonDLabel.enabled = false
             buttonELabel.enabled = false
             buttonStartLabel.enabled = true
+            buttonStartLabel.hidden = false
         }
         
     }
