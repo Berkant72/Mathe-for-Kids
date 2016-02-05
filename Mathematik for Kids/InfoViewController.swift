@@ -16,7 +16,7 @@ class InfoViewController: UIViewController {
     
     
     override func viewDidLoad () {
-        infoLabel.text = "Das ist die Version 1.0."
+        infoLabel.text = "Das ist die Version 1.2."
         
         
     }

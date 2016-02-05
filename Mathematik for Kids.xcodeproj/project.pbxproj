@@ -11,7 +11,6 @@
 		1E24FAB91C4C386D004B4BB6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E24FAB81C4C386D004B4BB6 /* ViewController.swift */; };
 		1E24FABC1C4C386D004B4BB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E24FABA1C4C386D004B4BB6 /* Main.storyboard */; };
 		1E24FABF1C4C386D004B4BB6 /* Mathematik_for_Kids.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1E24FABD1C4C386D004B4BB6 /* Mathematik_for_Kids.xcdatamodeld */; };
-		1E24FAC11C4C386D004B4BB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E24FAC01C4C386D004B4BB6 /* Assets.xcassets */; };
 		1E24FAC41C4C386D004B4BB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E24FAC21C4C386D004B4BB6 /* LaunchScreen.storyboard */; };
 		1E24FACF1C4C386D004B4BB6 /* Mathematik_for_KidsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E24FACE1C4C386D004B4BB6 /* Mathematik_for_KidsTests.swift */; };
 		1E24FADA1C4C386D004B4BB6 /* Mathematik_for_KidsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E24FAD91C4C386D004B4BB6 /* Mathematik_for_KidsUITests.swift */; };
@@ -20,6 +19,7 @@
 		1E24FAEC1C4C4830004B4BB6 /* MultiplikationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E24FAEB1C4C4830004B4BB6 /* MultiplikationViewController.swift */; };
 		1E24FAEE1C4C4843004B4BB6 /* DivisionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E24FAED1C4C4843004B4BB6 /* DivisionViewController.swift */; };
 		1E24FAF01C4D9CEF004B4BB6 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E24FAEF1C4D9CEF004B4BB6 /* InfoViewController.swift */; };
+		1E2545F01C65128A007C857F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E2545EF1C65128A007C857F /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +45,6 @@
 		1E24FAB81C4C386D004B4BB6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1E24FABB1C4C386D004B4BB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1E24FABE1C4C386D004B4BB6 /* Mathematik_for_Kids.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Mathematik_for_Kids.xcdatamodel; sourceTree = "<group>"; };
-		1E24FAC01C4C386D004B4BB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1E24FAC31C4C386D004B4BB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1E24FAC51C4C386D004B4BB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E24FACA1C4C386D004B4BB6 /* Mathematik for KidsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mathematik for KidsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +58,7 @@
 		1E24FAEB1C4C4830004B4BB6 /* MultiplikationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiplikationViewController.swift; sourceTree = "<group>"; };
 		1E24FAED1C4C4843004B4BB6 /* DivisionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DivisionViewController.swift; sourceTree = "<group>"; };
 		1E24FAEF1C4D9CEF004B4BB6 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		1E2545EF1C65128A007C857F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +117,7 @@
 				1E24FAED1C4C4843004B4BB6 /* DivisionViewController.swift */,
 				1E24FAEF1C4D9CEF004B4BB6 /* InfoViewController.swift */,
 				1E24FABA1C4C386D004B4BB6 /* Main.storyboard */,
-				1E24FAC01C4C386D004B4BB6 /* Assets.xcassets */,
+				1E2545EF1C65128A007C857F /* Assets.xcassets */,
 				1E24FAC21C4C386D004B4BB6 /* LaunchScreen.storyboard */,
 				1E24FAC51C4C386D004B4BB6 /* Info.plist */,
 				1E24FABD1C4C386D004B4BB6 /* Mathematik_for_Kids.xcdatamodeld */,
@@ -249,7 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E24FAC41C4C386D004B4BB6 /* LaunchScreen.storyboard in Resources */,
-				1E24FAC11C4C386D004B4BB6 /* Assets.xcassets in Resources */,
+				1E2545F01C65128A007C857F /* Assets.xcassets in Resources */,
 				1E24FABC1C4C386D004B4BB6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -373,7 +373,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -411,7 +411,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -435,7 +435,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				INFOPLIST_FILE = "Mathematik for Kids/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Berkant-Dursun.Mathematik-for-Kids";
