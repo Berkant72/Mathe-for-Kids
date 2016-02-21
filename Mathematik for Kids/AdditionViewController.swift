@@ -43,6 +43,14 @@ class AdditionViewController: UIViewController, UIAlertViewDelegate {
         buttonELabel.enabled = false
         buttonStartLabel.enabled = true
         buttonStartLabel.hidden = false
+        // anzeigeLabelStepper.text = "100"
+        
+//        // Stepper
+//        uiStepper.wraps = true // fängt nach maximum wieder von Null an
+//        uiStepper.autorepeat = true // schneller durchlauf nach langem Drücken
+//        uiStepper.minimumValue = 100
+//        uiStepper.maximumValue = 1000
+//        uiStepper.stepValue = 50
         
         highScoreAddition = prefs.integerForKey("SavedHighScoreAddition")
         highScoreLabel.text = String("Highscore: \(highScoreAddition)")
@@ -62,6 +70,10 @@ class AdditionViewController: UIViewController, UIAlertViewDelegate {
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var highScoreLabel: UILabel!
+//    @IBOutlet weak var anzeigeLabelStepper: UILabel!
+//    
+//    @IBOutlet weak var uiStepper: UIStepper!
+    
     
     // Um auf die properties der UIButtons zuzugreifen
     @IBOutlet weak var buttonALabel: UIButton!
@@ -94,6 +106,9 @@ class AdditionViewController: UIViewController, UIAlertViewDelegate {
         berechneAddition()
     }
     
+//    @IBAction func stepperValueChanged(sender: UIStepper) {
+//        anzeigeLabelStepper.text = Int(sender.value).description
+//    }
     
     
     
@@ -283,7 +298,12 @@ class AdditionViewController: UIViewController, UIAlertViewDelegate {
         
         var addendOne = 0
         var addendTwo = 0
-        
+//        var addendOneBereich = UInt32()
+//        var addendTwoBereich = UInt32()
+//        addendOneBereich = 0
+//        addendTwoBereich = 0
+//        addendOneBereich = UInt32(uiStepper.value)// .description
+//        addendTwoBereich = UInt32(uiStepper.value)
         
         addendOne = Int(arc4random_uniform(100))
         addendOneLabel.text = String(addendOne)
@@ -381,11 +401,7 @@ class AdditionViewController: UIViewController, UIAlertViewDelegate {
         default: break
             // print("im Default resultField")
         }
-
     
-    
-    
-    
-}
+    }
 
 }

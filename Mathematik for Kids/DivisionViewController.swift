@@ -62,6 +62,8 @@ class DivisionViewController: UIViewController ,UIAlertViewDelegate {
     @IBOutlet weak var highScoreLabel: UILabel!
     @IBOutlet weak var infoLabel: UILabel!
     
+    
+    
     // Um auf die properties der UIButtons zuzugreifen
     @IBOutlet weak var buttonALabel: UIButton!
     @IBOutlet weak var buttonBLabel: UIButton!
