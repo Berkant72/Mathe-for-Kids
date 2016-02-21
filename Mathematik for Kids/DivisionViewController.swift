@@ -21,6 +21,7 @@ class DivisionViewController: UIViewController ,UIAlertViewDelegate {
     var highScoreDivision = NSInteger()
     var prefs: NSUserDefaults = NSUserDefaults.standardUserDefaults()
     var info = NSTimer()
+    var einmalig = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +36,7 @@ class DivisionViewController: UIViewController ,UIAlertViewDelegate {
         timerLabel.text = "60"
         scoreLabel.text = "0"
         highScoreLabel.text = "0"
+        newHighScoreLabel.hidden = true
         buttonALabel.enabled = false
         buttonBLabel.enabled = false
         buttonCLabel.enabled = false
@@ -50,6 +52,7 @@ class DivisionViewController: UIViewController ,UIAlertViewDelegate {
         
     }
     
+    @IBOutlet weak var newHighScoreLabel: UILabel!
     @IBOutlet weak var dividendLabel: UILabel!
     @IBOutlet weak var divisorLabel: UILabel!
     @IBOutlet weak var resultLabelA: UILabel!
@@ -176,6 +179,7 @@ class DivisionViewController: UIViewController ,UIAlertViewDelegate {
     func anzeigeDauer() {
         print(__FUNCTION__)
         infoLabel.hidden = true
+        newHighScoreLabel.hidden = true
     }
     
     func richtig () {
@@ -197,6 +201,7 @@ class DivisionViewController: UIViewController ,UIAlertViewDelegate {
         
         info = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "anzeigeDauer", userInfo: nil, repeats: false)
     }
+    
     func counting() {
         
         timerCount--
@@ -258,12 +263,17 @@ class DivisionViewController: UIViewController ,UIAlertViewDelegate {
     
     func score() {
         print(__FUNCTION__)
-        
-        
         points += 1
         scoreLabel.text = String(points)
         
         if points > highScoreDivision {
+            if einmalig == true {
+                newHighScoreLabel.hidden = false
+                newHighScoreLabel.text = "HIGHSCORE !!!"
+                info = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: "anzeigeDauer", userInfo: nil, repeats: false)
+                einmalig = false
+            }
+            
             highScoreDivision = points
             prefs.setInteger(highScoreDivision, forKey: "SavedHighScoreDivision")
             highScoreLabel.text = String("Highscore: \(highScoreDivision)")

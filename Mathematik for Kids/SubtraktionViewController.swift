@@ -21,6 +21,7 @@ class SubtraktionViewController: UIViewController ,UIAlertViewDelegate {
     var highScoreSubtraktion = NSInteger()
     var prefs: NSUserDefaults = NSUserDefaults.standardUserDefaults()
     var info = NSTimer()
+    var einmalig = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +36,7 @@ class SubtraktionViewController: UIViewController ,UIAlertViewDelegate {
         timerLabel.text = "60"
         scoreLabel.text = "0"
         highScoreLabel.text = "0"
+        newHighScoreLabel.hidden = true
         buttonALabel.enabled = false
         buttonBLabel.enabled = false
         buttonCLabel.enabled = false
@@ -51,6 +53,7 @@ class SubtraktionViewController: UIViewController ,UIAlertViewDelegate {
     }
     
     
+    @IBOutlet weak var newHighScoreLabel: UILabel!
     @IBOutlet weak var minuendLabel: UILabel!
     @IBOutlet weak var subtrahendLabel: UILabel!
     @IBOutlet weak var resultLabelA: UILabel!
@@ -174,6 +177,7 @@ class SubtraktionViewController: UIViewController ,UIAlertViewDelegate {
     func anzeigeDauer() {
         print(__FUNCTION__)
         infoLabel.hidden = true
+        newHighScoreLabel.hidden = true
     }
     
     func richtig () {
@@ -258,11 +262,17 @@ class SubtraktionViewController: UIViewController ,UIAlertViewDelegate {
     func score() {
         print(__FUNCTION__)
         
-        
         points += 1
         scoreLabel.text = String(points)
         
         if points > highScoreSubtraktion {
+            if einmalig == true {
+                newHighScoreLabel.hidden = false
+                newHighScoreLabel.text = "HIGHSCORE !!!"
+                info = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: "anzeigeDauer", userInfo: nil, repeats: false)
+                einmalig = false
+            }
+            
             highScoreSubtraktion = points
             prefs.setInteger(highScoreSubtraktion, forKey: "SavedHighScoreSubtraktion")
             highScoreLabel.text = String("Highscore: \(highScoreSubtraktion)")
@@ -270,6 +280,7 @@ class SubtraktionViewController: UIViewController ,UIAlertViewDelegate {
             print("Syncronisiere")
             
         }
+        
     }
     
     

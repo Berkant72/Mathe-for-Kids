@@ -21,6 +21,7 @@ class AdditionViewController: UIViewController, UIAlertViewDelegate {
     var highScoreAddition = NSInteger()
     var prefs: NSUserDefaults = NSUserDefaults.standardUserDefaults()
     var info = NSTimer()
+    var einmalig = true
     
     
     override func viewDidLoad() {
@@ -36,6 +37,7 @@ class AdditionViewController: UIViewController, UIAlertViewDelegate {
         timerLabel.text = "60"
         scoreLabel.text = "0"
         highScoreLabel.text = "0"
+        newHighScoreLabel.hidden = true
         buttonALabel.enabled = false
         buttonBLabel.enabled = false
         buttonCLabel.enabled = false
@@ -59,6 +61,7 @@ class AdditionViewController: UIViewController, UIAlertViewDelegate {
         
     }
     
+    @IBOutlet weak var newHighScoreLabel: UILabel!
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var addendOneLabel: UILabel!
     @IBOutlet weak var addendTwoLabel: UILabel!
@@ -191,6 +194,8 @@ class AdditionViewController: UIViewController, UIAlertViewDelegate {
     func anzeigeDauer() {
         print(__FUNCTION__)
         infoLabel.hidden = true
+        newHighScoreLabel.hidden = true
+        
     }
     
     func richtig () {
@@ -279,9 +284,14 @@ class AdditionViewController: UIViewController, UIAlertViewDelegate {
         points += 1
         scoreLabel.text = String(points)
         
-        
-        
         if points > highScoreAddition {
+            if einmalig == true {
+                newHighScoreLabel.hidden = false
+                newHighScoreLabel.text = "HIGHSCORE !!!"
+                info = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: "anzeigeDauer", userInfo: nil, repeats: false)
+                einmalig = false
+            }
+        
             highScoreAddition = points
             prefs.setInteger(highScoreAddition, forKey: "SavedHighScoreAddition")
             highScoreLabel.text = String("Highscore: \(highScoreAddition)")
