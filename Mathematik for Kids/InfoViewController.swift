@@ -16,7 +16,7 @@ class InfoViewController: UIViewController {
     
     override func viewDidLoad () {
         
-        infoLabel.text = "Ziel ist es in einer Minute so viele Punkte wie möglich zu erzielen. Zuerst mußt du eine Grundrechenart (+,-,x,/) auswählen und im nächsten Schritt mit dem Start-Button die Übung starten \n. Du bekommst eine Rechenaufgabe und fünf möglichen antworten, wovon nur eine richtig ist. Dies wird dir auch mit richtig oder falsch angezeigt."
+        infoLabel.text = "Ziel ist es in einer Minute so viele Punkte wie möglich zu erzielen. Zuerst mußt du eine Grundrechenart (+,-,x,/) auswählen und im nächsten Schritt mit dem Start-Button die Übung starten. \nDu bekommst eine Rechenaufgabe und fünf möglichen antworten, wovon nur eine richtig ist. Dies wird dir auch mit richtig oder falsch angezeigt."
         
         
     }
