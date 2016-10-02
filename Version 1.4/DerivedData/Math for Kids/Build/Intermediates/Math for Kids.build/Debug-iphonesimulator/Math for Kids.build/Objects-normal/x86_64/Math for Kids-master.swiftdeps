@@ -1,0 +1,11 @@
+version: "Apple Swift version 2.3 (swiftlang-800.10.12 clang-800.0.38)"
+options: "91629d01a3bc90201a05a7f711e2a027"
+build_time: [528732786, 145612000]
+inputs:
+  "/Users/Berkant/Programmierung/Projekte/IOS Projekte/Swift/Mathe for Kids/Version 1.4/Mathematik for Kids/ViewController.swift": [506379629, 0]
+  "/Users/Berkant/Programmierung/Projekte/IOS Projekte/Swift/Mathe for Kids/Version 1.4/Mathematik for Kids/AdditionViewController.swift": [517269896, 0]
+  "/Users/Berkant/Programmierung/Projekte/IOS Projekte/Swift/Mathe for Kids/Version 1.4/Mathematik for Kids/SubtraktionViewController.swift": [517270011, 0]
+  "/Users/Berkant/Programmierung/Projekte/IOS Projekte/Swift/Mathe for Kids/Version 1.4/Mathematik for Kids/DivisionViewController.swift": [517270080, 0]
+  "/Users/Berkant/Programmierung/Projekte/IOS Projekte/Swift/Mathe for Kids/Version 1.4/Mathematik for Kids/MultiplikationViewController.swift": [517270011, 0]
+  "/Users/Berkant/Programmierung/Projekte/IOS Projekte/Swift/Mathe for Kids/Version 1.4/Mathematik for Kids/InfoViewController.swift": [509404538, 0]
+  "/Users/Berkant/Programmierung/Projekte/IOS Projekte/Swift/Mathe for Kids/Version 1.4/Mathematik for Kids/AppDelegate.swift": [506379629, 0]
