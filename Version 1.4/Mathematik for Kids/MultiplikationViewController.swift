@@ -363,8 +363,6 @@ class MultiplikationViewController: UIViewController ,UIAlertViewDelegate {
             
         } while(zahlenArray.count<5)
         
-        
-        
         // Zufallszahlen werden in die Labels gesetzt
         resultLabelA.text = String(zahlenArray[0])
         // print(zahlenArray[0])
@@ -405,8 +403,5 @@ class MultiplikationViewController: UIViewController ,UIAlertViewDelegate {
         default: break
             // print("im Default resultField")
         }
-
-    
-}
-
+    }
 }

@@ -9,10 +9,10 @@ provides-dynamic-lookup:
 - "viewDidLoad"
 - "infoLabel"
 depends-top-level:
+- !private "StringLiteralType"
+- "UITextView"
 - "UIViewController"
 - "InfoViewController"
-- "UITextView"
-- !private "StringLiteralType"
 depends-member:
 - ["Ps9AnyObject", "infoLabel"]
 - ["Ps9AnyObject", "init"]
