@@ -17,40 +17,13 @@ class DivisionViewController: UIViewController ,UIAlertViewDelegate {
     var points = 0
     var timerCount = 60
     var timerRunning = false
-    var timer = NSTimer()
+    var timer = Timer()
     var highScoreDivision = NSInteger()
-    var prefs: NSUserDefaults = NSUserDefaults.standardUserDefaults()
-    var info = NSTimer()
+    var prefs: UserDefaults = UserDefaults.standard
+    var info = Timer()
     var einmalig = true
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        print(#function)
-        dividendLabel.text = "1"
-        divisorLabel.text = "1"
-        resultLabelA.text = "1"
-        resultLabelB.text = "2"
-        resultLabelC.text = "3"
-        resultLabelD.text = "4"
-        resultLabelE.text = "5"
-        timerLabel.text = "60"
-        scoreLabel.text = "0"
-        highScoreLabel.text = "0"
-        newHighScoreLabel.hidden = true
-        buttonALabel.enabled = false
-        buttonBLabel.enabled = false
-        buttonCLabel.enabled = false
-        buttonDLabel.enabled = false
-        buttonELabel.enabled = false
-        buttonStartLabel.enabled = true
-        buttonStartLabel.hidden = false
-        
-        highScoreDivision = prefs.integerForKey("SavedHighScoreDivision")
-        highScoreLabel.text = String("Highscore: \(highScoreDivision)")
-        // print("HighScore: \(highScoreAddition)")
-        prefs.synchronize()
-        
-    }
+  
     
     @IBOutlet weak var newHighScoreLabel: UILabel!
     @IBOutlet weak var dividendLabel: UILabel!
@@ -76,22 +49,51 @@ class DivisionViewController: UIViewController ,UIAlertViewDelegate {
     @IBOutlet weak var buttonStartLabel: UIButton!
     
     
-    
-    @IBAction func buttonStartPressed(sender: UIButton) {
+    override func viewDidLoad() {
+        super.viewDidLoad()
         print(#function)
-        buttonALabel.enabled = true
-        buttonBLabel.enabled = true
-        buttonCLabel.enabled = true
-        buttonDLabel.enabled = true
-        buttonELabel.enabled = true
-        buttonStartLabel.enabled = false
-        buttonStartLabel.hidden = true
+        dividendLabel.text = "1"
+        divisorLabel.text = "1"
+        resultLabelA.text = "1"
+        resultLabelB.text = "2"
+        resultLabelC.text = "3"
+        resultLabelD.text = "4"
+        resultLabelE.text = "5"
+        timerLabel.text = "60"
+        scoreLabel.text = "0"
+        highScoreLabel.text = "0"
+        newHighScoreLabel.isHidden = true
+        buttonALabel.isEnabled = false
+        buttonBLabel.isEnabled = false
+        buttonCLabel.isEnabled = false
+        buttonDLabel.isEnabled = false
+        buttonELabel.isEnabled = false
+        buttonStartLabel.isEnabled = true
+        buttonStartLabel.isHidden = false
+        
+        highScoreDivision = prefs.integer(forKey: "SavedHighScoreDivision")
+        highScoreLabel.text = String("Highscore: \(highScoreDivision)")
+        // print("HighScore: \(highScoreAddition)")
+        prefs.synchronize()
+        
+    }
+    
+    
+    @IBAction func buttonStartPressed(_ sender: UIButton) {
+        print(#function)
+        buttonALabel.isEnabled = true
+        buttonBLabel.isEnabled = true
+        buttonCLabel.isEnabled = true
+        buttonDLabel.isEnabled = true
+        buttonELabel.isEnabled = true
+        buttonStartLabel.isEnabled = false
+        buttonStartLabel.isHidden = true
         scoreLabel.text = "0"
         timerLabel.text = "60"
         points = 0
         timerCount = 60
         if timerRunning == false {
-            timer = NSTimer.scheduledTimerWithTimeInterval(1.0,
+            timer = Timer.scheduledTimer(timeInterval: 1.0,
                                                            target: self,
                                                            selector: #selector(DivisionViewController.counting),
                                                            userInfo: nil,
@@ -104,7 +106,7 @@ class DivisionViewController: UIViewController ,UIAlertViewDelegate {
     }
     
     
-    @IBAction func buttonAPressed(sender: UIButton) {
+    @IBAction func buttonAPressed(_ sender: UIButton) {
         print(#function)
         if ergebnisInLabel == 0 {
             richtig()
@@ -118,7 +120,7 @@ class DivisionViewController: UIViewController ,UIAlertViewDelegate {
         // print("Button A Pressed")
     }
     
-    @IBAction func buttonBPressed(sender: UIButton) {
+    @IBAction func buttonBPressed(_ sender: UIButton) {
         print(#function)
         if ergebnisInLabel == 1 {
             richtig()
@@ -132,7 +134,7 @@ class DivisionViewController: UIViewController ,UIAlertViewDelegate {
         // print("Button B Pressed")
     }
     
-    @IBAction func buttonCPressed(sender: UIButton) {
+    @IBAction func buttonCPressed(_ sender: UIButton) {
         print(#function)
         if ergebnisInLabel == 2 {
             richtig()
@@ -146,7 +148,7 @@ class DivisionViewController: UIViewController ,UIAlertViewDelegate {
         // print("Button C Pressed")
     }
     
-    @IBAction func buttonDPressed(sender: UIButton) {
+    @IBAction func buttonDPressed(_ sender: UIButton) {
         print(#function)
         if ergebnisInLabel == 3 {
             richtig()
@@ -160,7 +162,7 @@ class DivisionViewController: UIViewController ,UIAlertViewDelegate {
         // print("Button D Pressed")
     }
     
-    @IBAction func buttonEPressed(sender: UIButton) {
+    @IBAction func buttonEPressed(_ sender: UIButton) {
         print(#function)
         if ergebnisInLabel == 4 {
             richtig()
@@ -174,26 +176,26 @@ class DivisionViewController: UIViewController ,UIAlertViewDelegate {
         // print("Button E Pressed")
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         
         timer.invalidate()
         // print("viewWillDisappear")
     }
     
-    func anzeigeDauer() {
+    @objc func anzeigeDauer() {
         print(#function)
-        infoLabel.hidden = true
-        newHighScoreLabel.hidden = true
+        infoLabel.isHidden = true
+        newHighScoreLabel.isHidden = true
     }
     
     func richtig () {
         print(#function)
-        infoLabel.hidden = false
-        infoLabel.textColor = UIColor.greenColor()
-        infoLabel.shadowColor = UIColor.grayColor()
+        infoLabel.isHidden = false
+        infoLabel.textColor = UIColor.green
+        infoLabel.shadowColor = UIColor.gray
         infoLabel.text = "Richtig"
         
-        info = NSTimer.scheduledTimerWithTimeInterval(1,
+        info = Timer.scheduledTimer(timeInterval: 1,
                                                       target: self,
                                                       selector: #selector(DivisionViewController.anzeigeDauer),
                                                       userInfo: nil,
@@ -202,19 +204,19 @@ class DivisionViewController: UIViewController ,UIAlertViewDelegate {
     
     func falsch () {
         print(#function)
-        infoLabel.hidden = false
-        infoLabel.textColor = UIColor.redColor()
-        infoLabel.shadowColor = UIColor.grayColor()
+        infoLabel.isHidden = false
+        infoLabel.textColor = UIColor.red
+        infoLabel.shadowColor = UIColor.gray
         infoLabel.text = "Falsch"
         
-        info = NSTimer.scheduledTimerWithTimeInterval(1,
+        info = Timer.scheduledTimer(timeInterval: 1,
                                                       target: self,
                                                       selector: #selector(DivisionViewController.anzeigeDauer),
                                                       userInfo: nil,
                                                       repeats: false)
     }
     
-    func counting() {
+    @objc func counting() {
         
         timerCount -= 1
         timerLabel.text = String(timerCount)
@@ -224,13 +226,13 @@ class DivisionViewController: UIViewController ,UIAlertViewDelegate {
             timer.invalidate()
             alertView()
             timerRunning = false
-            buttonALabel.enabled = false
-            buttonBLabel.enabled = false
-            buttonCLabel.enabled = false
-            buttonDLabel.enabled = false
-            buttonELabel.enabled = false
-            buttonStartLabel.enabled = true
-            buttonStartLabel.hidden = false
+            buttonALabel.isEnabled = false
+            buttonBLabel.isEnabled = false
+            buttonCLabel.isEnabled = false
+            buttonDLabel.isEnabled = false
+            buttonELabel.isEnabled = false
+            buttonStartLabel.isEnabled = true
+            buttonStartLabel.isHidden = false
         }
         
     }
@@ -238,7 +240,7 @@ class DivisionViewController: UIViewController ,UIAlertViewDelegate {
     func alertView() {
         if (points == 1) {
             let uiAlertController = UIAlertController(title: "Ergebnis:",
-                message: "Du hast \(points) Punkt", preferredStyle: .Alert)
+                message: "Du hast \(points) Punkt", preferredStyle: .alert)
             
             //        let cancelAction = UIAlertAction(title: "Nochmal spielen!", style: .Cancel) {
             //            (action) in
@@ -246,27 +248,27 @@ class DivisionViewController: UIViewController ,UIAlertViewDelegate {
             //        }
             //        uiAlertController.addAction(cancelAction)
             
-            let OKAction = UIAlertAction(title: "Ok", style: .Default) { (action) in
+            let OKAction = UIAlertAction(title: "Ok", style: .default) { (action) in
                 // print("Ok-Button wurde betätigt")
             }
             uiAlertController.addAction(OKAction)
             
             // Die Methode presentViewController sorgt dafür, dass ein View modal angezeigt wird.
-            self.presentViewController(uiAlertController, animated: true) {
+            self.present(uiAlertController, animated: true) {
                 
             }
             
         } else {
             let uiAlertController = UIAlertController(title: "Ergebnis:",
-                message: "Du hast \(points) Punkte", preferredStyle: .Alert)
+                message: "Du hast \(points) Punkte", preferredStyle: .alert)
             
-            let OKAction = UIAlertAction(title: "Ok", style: .Default) { (action) in
+            let OKAction = UIAlertAction(title: "Ok", style: .default) { (action) in
                 // print("Ok-Button wurde betätigt")
             }
             uiAlertController.addAction(OKAction)
             
             // Die Methode presentViewController sorgt dafür, dass ein View modal angezeigt wird.
-            self.presentViewController(uiAlertController, animated: true) {
+            self.present(uiAlertController, animated: true) {
                 
             }
         }
@@ -280,9 +282,9 @@ class DivisionViewController: UIViewController ,UIAlertViewDelegate {
         
         if points > highScoreDivision {
             if einmalig == true {
-                newHighScoreLabel.hidden = false
+                newHighScoreLabel.isHidden = false
                 newHighScoreLabel.text = "HIGHSCORE !!!"
-                info = NSTimer.scheduledTimerWithTimeInterval(2,
+                info = Timer.scheduledTimer(timeInterval: 2,
                                                               target: self,
                                                               selector: #selector(DivisionViewController.anzeigeDauer),
                                                               userInfo: nil,
@@ -291,7 +293,7 @@ class DivisionViewController: UIViewController ,UIAlertViewDelegate {
             }
             
             highScoreDivision = points
-            prefs.setInteger(highScoreDivision, forKey: "SavedHighScoreDivision")
+            prefs.set(highScoreDivision, forKey: "SavedHighScoreDivision")
             highScoreLabel.text = String("Highscore: \(highScoreDivision)")
             prefs.synchronize()
             print("Syncronisiere")
@@ -354,7 +356,7 @@ class DivisionViewController: UIViewController ,UIAlertViewDelegate {
                 for var j in 0 ..< zahlenArray.count-1 {
                     if j < i {
                         if zahlenArray[i] == zahlenArray[j] {
-                            zahlenArray.removeAtIndex(j)
+                            zahlenArray.remove(at: j)
                             j -= 1
                         }
                     }
